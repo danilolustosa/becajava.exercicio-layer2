@@ -11,6 +11,23 @@ public class Main {
 		OperacaoService operacaoService = new OperacaoService();
 		
 		
+		
+		//TRANFERÊNCIA
+		Operacao operacao = new Operacao();
+		System.out.println("Digite o valor para a realização da operação: ");
+		operacao.Valor = leitor.nextDouble();
+		System.out.println("Digite o índice da conta de ORIGEM para a realização da operação: ");
+		int indiceOrigem = leitor.nextInt();
+		System.out.println("Digite o índice da conta de DESTINO para a realização da operação: ");
+		int indiceDestino = leitor.nextInt();
+		String result = operacaoService.Transferencia(indiceOrigem, indiceDestino, operacao);
+		
+		if (result != "")
+			System.out.println(result);
+		else
+			System.out.println("Transferência realizada com sucesso!");
+		
+		
 		//SAQUE
 //		Operacao operacao = new Operacao();
 //		System.out.println("Digite o valor para a realização da operação: ");
